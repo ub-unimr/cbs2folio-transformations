@@ -15,11 +15,18 @@
   <xsl:template match="permanentLocationId"> <!-- ILN -->
     <permanentLocationId>
       <xsl:choose>
-        <xsl:when test=".='DUMMY'">6276b77c-d3fc-419e-a968-776b8e24657c</xsl:when> <!-- TBD uuids -->
-        <xsl:when test=".='MAG'">88b67ebc-2290-4a6e-870a-f5aec7ec650d</xsl:when>
-        <xsl:when test=".='ONLINE'">67839ee1-92e2-4c45-a4f7-53808f235b26</xsl:when>
-
-        <xsl:otherwise>5017a025-9055-41cf-9466-5c2ea4e207f0</xsl:otherwise> <!-- UNDEF -->
+        <xsl:when test=".='4 OG West'">5a45e7ca-5eec-4347-9977-d8f30674d568</xsl:when>
+        <xsl:when test=".='3 OG West'">34fc20de-91c2-4e08-8b2b-3a255c5ac406</xsl:when>
+        <xsl:when test=".='3 OG Ost'">114d9be6-192a-4edf-aa79-995efb75d288</xsl:when>
+        <xsl:when test=".='2 OG West'">696f825a-2b8f-4b90-9ddc-fc663fa33ff4</xsl:when>
+        <xsl:when test=".='2 OG West - Sondermagazin nur für den Sonderlesesaal'">bd941e14-55e3-4cf6-9dbb-d4a7d0bbacf2</xsl:when>
+        <xsl:when test=".='2 OG West - Sondermagazin Ausleihbestand'">86302fc5-2fa3-42c4-92eb-5224a55a0f2a</xsl:when>
+        <xsl:when test=".='2 OG Ost'">f7bf853b-c1b8-4afc-a4d3-fa6ba188d419</xsl:when>
+        <xsl:when test=".='1 OG Ost'">551c0331-296d-4b22-8828-037da1b62110</xsl:when>
+        <xsl:when test=".='1 OG West - Sonderlesesaal'">b38d339e-e42d-49e6-87e6-64ed097a2aa1</xsl:when>
+        <xsl:when test=".='1 OG West - Medienzentrum'">0aca5290-1fec-4f21-a21e-4230a307c1b1</xsl:when>
+        <!-- TBD! Correct Default; 2 OG West - Sondermagazin nur für den Sonderlesesaal  -->
+        <xsl:otherwise>bd941e14-55e3-4cf6-9dbb-d4a7d0bbacf2</xsl:otherwise>
       </xsl:choose>
     </permanentLocationId>
   </xsl:template>
@@ -29,21 +36,14 @@
   <xsl:template match="permanentLoanTypeId"> <!-- ILN --> <!-- TBD -->
     <permanentLoanTypeId>
       <xsl:choose>
-        <xsl:when test=".='0 u Ausleihbar'"><xsl:text>2b94c631-fca9-4892-a730-03ee529ffe27</xsl:text></xsl:when> 
-        <xsl:when test=".='1 b Kurzausleihe'"><xsl:text>bb0ce7c4-ed32-4a12-8c33-275c3f3cb6de</xsl:text></xsl:when>
-        <xsl:when test=".='2 c Lehrbuchsammlungsausleihe'"><xsl:text>0da2c71c-7433-41ce-8271-7be3317c0d83</xsl:text></xsl:when>
-        <xsl:when test=".='3 s Präsenzbestand'"><xsl:text>f77564f5-f8de-4c21-8aea-c3bc40cf37e6</xsl:text></xsl:when>
-        <xsl:when test=".='4 d Passive Fernleihe'"><xsl:text>7437cc4a-a4ff-4cab-9958-ab953a10ed19</xsl:text></xsl:when>
-        <xsl:when test=".='5 i Nur für den Lesesaal'"><xsl:text>2e48e713-17f3-4c13-a9f8-23845bb210a4</xsl:text></xsl:when>
-        <!-- <xsl:when test=".='6 f nur Kopie möglich'"><xsl:text>???</xsl:text></xsl:when> -->
-        <xsl:when test=".='7 x Semesterausleihe'"><xsl:text>f3328220-a786-4f4b-aee6-24fe587c3187</xsl:text></xsl:when>
-        <xsl:when test=".='8 e Vermisst'"><xsl:text>03919ca9-83ae-4518-8234-291e0d948f75</xsl:text></xsl:when>
-        <xsl:when test=".='9 a Zur Erwerbung bestellt'"><xsl:text>baaae2f6-229f-49cb-a190-b4f0a6ac868a</xsl:text></xsl:when>
-        <xsl:when test=".='9 g Nicht ausleihbar'"><xsl:text>60cc511f-89b2-4ea3-89d2-1469920d4d3f</xsl:text></xsl:when>
-        <xsl:when test=".='9 o Ausleihstatus unbekannt'"><xsl:text>83f8945f-b64c-4a72-aa93-342108989345</xsl:text></xsl:when>
-        <xsl:when test=".='9 z Verlust'"><xsl:text>c757bcfc-09da-4299-a038-c3c366686d87</xsl:text></xsl:when>
-        <!-- <xsl:otherwise>2b94c631-fca9-4892-a730-03ee529ffe27</xsl:otherwise> <! 0 u normal ausleihbar -->
-        <xsl:otherwise>83f8945f-b64c-4a72-aa93-342108989345</xsl:otherwise> <!-- 9 o Ausleihstatus unbekannt -->
+        <xsl:when test=".='0 u ausleihbar'">5b02897b-0993-4a6d-857e-992e1e08b28a</xsl:when>
+        <xsl:when test=".='1 b Kurzausleihe'">23c01bbe-e0a9-424c-9a3f-8559a5c11ca5</xsl:when>
+        <xsl:when test=".='2 c Lehrbuchsammlung'">9cdd75ad-d6ee-4fbe-a899-d71ec6ec775d</xsl:when>
+        <xsl:when test=".='3 s Präsenzbestand Lesesaal'">d4053309-db60-4ddb-8814-bf33fe6498f6</xsl:when>
+        <xsl:when test=".='4 d Präsenzbestand Wochenendausleihe'">699fee80-0a93-4e22-87da-40653b0ed5ad</xsl:when>
+        <xsl:when test=".='5 i nur für den Lesesaal'">bde06480-3294-47e6-ac56-61234053691d</xsl:when>
+        <!-- TBD! Correct Default; 0 u normal ausleihbar -->
+        <xsl:otherwise>5b02897b-0993-4a6d-857e-992e1e08b28a</xsl:otherwise>
       </xsl:choose>
     </permanentLoanTypeId>
   </xsl:template>
