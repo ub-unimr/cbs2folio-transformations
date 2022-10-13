@@ -29,7 +29,7 @@
              <!-- ab hier via Signatur 1. RVK, 2. Magazin 3. TB -->
              <!-- ungeschachteltes choose wenn feinere Bedingung zuerst kommt, analog Bin Table -->
              <xsl:when test="starts-with ($signatur,'011')">4OGW</xsl:when>
-             <xsl:when test="starts-with ($signatur,'013')">4OGW</xsl:when>
+             <xsl:when test="starts-with ($signatur='013')">4OGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'001 A')">2OGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'001 B')">2OGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'001 CM')">1OGO</xsl:when>
@@ -116,7 +116,7 @@
              <xsl:when test="starts-with ($signatur,'080 Cd ')">1OGWMZ</xsl:when>
              <xsl:when test="starts-with ($signatur,'080 Dv ')">1OGWMZ</xsl:when>
              <xsl:when test="starts-with ($signatur,'080 Xy ')">1OGWMZ</xsl:when>
-             <xsl:when test="starts-with ($signatur,'080 ')">UGOM</xsl:when>
+             <xsl:when test="starts-with ($signatur,'080 ')">UGOU</xsl:when>
              <xsl:when test="starts-with ($signatur,'085 1 Zs ')">UGOSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'085 1 ')">2OGWSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'085 2 ')">1OGWSLS</xsl:when>
@@ -124,7 +124,7 @@
              <xsl:when test="starts-with ($signatur,'085 8 ')">1OGWSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'085 Kt ')">2OGWSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'085 Xy ')">1OGWMZ</xsl:when>
-             <xsl:when test="starts-with ($signatur,'085 ')">UGOM</xsl:when>
+             <xsl:when test="starts-with ($signatur,'085 ')">UGOU</xsl:when>
              <xsl:when test="starts-with ($signatur,'088 ')">1OGWMZ</xsl:when>
              <xsl:when test="starts-with ($signatur,'095 ')">2OGWSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'2 A')">UGW</xsl:when>
@@ -153,7 +153,7 @@
              <xsl:when test="starts-with ($signatur,'2 W')">AMU</xsl:when>
              <xsl:when test="starts-with ($signatur,'2 X')">UGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'2 Y ')">UGW</xsl:when>
-             <xsl:when test="starts-with ($signatur,'2 Zs ')">UGOM</xsl:when>
+             <xsl:when test="starts-with ($signatur,'2 Zs ')">UGZM</xsl:when>
              <xsl:when test="starts-with ($signatur,'2 Z')">AMU</xsl:when>
              <xsl:when test="starts-with ($signatur,'4 A')">UGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'4 B')">UGW</xsl:when>
@@ -181,7 +181,7 @@
              <xsl:when test="starts-with ($signatur,'4 W')">AMU</xsl:when>
              <xsl:when test="starts-with ($signatur,'4 X')">UGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'4 Y ')">UGW</xsl:when>
-             <xsl:when test="starts-with ($signatur,'4 Zs ')">UGOM</xsl:when>
+             <xsl:when test="starts-with ($signatur,'4 Zs ')">UGZM</xsl:when>
              <xsl:when test="starts-with ($signatur,'4 Z')">AMU</xsl:when>
              <xsl:when test="starts-with ($signatur,'8 0 ')">AMU</xsl:when>
              <xsl:when test="starts-with ($signatur,'A')">UGW</xsl:when>
@@ -217,7 +217,7 @@
              <xsl:when test="starts-with ($signatur,'Xr ')">UGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'Y ')">UGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'Zf ')">1OGWMZ</xsl:when>
-             <xsl:when test="starts-with ($signatur,'Zs ')">UGOM</xsl:when>
+             <xsl:when test="starts-with ($signatur,'Zs ')">UGZM</xsl:when>
              <xsl:when test="starts-with ($signatur,'Z ')">AMU</xsl:when>
              <!-- Filme der Fachgruppen -->
              <xsl:when test="starts-with ($signatur,' Film ')">1OGWMZ</xsl:when>
@@ -261,6 +261,8 @@
              <xsl:when test="starts-with ($signatur,'V B ')">1OGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'V C ')">1OGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'V ')">AMU</xsl:when>
+             <xsl:when test="starts-with ($signatur,'Vs A ')">2OGWSMSLS</xsl:when>
+             <xsl:when test="starts-with ($signatur,'Vs ')">1OGW</xsl:when>
              <!-- VI -->
              <xsl:when test="starts-with ($signatur,'VI A ')">2OGWSMSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'VI aA ')">2OGWSMSLS</xsl:when>
@@ -453,9 +455,6 @@
              <xsl:when test="starts-with ($signatur,'VIIo B ')">1OGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'VIIo C ')">1OGW</xsl:when>
              <xsl:when test="starts-with ($signatur,'VIIo ')">AMU</xsl:when>
-             <xsl:when test="starts-with ($signatur,'VIIo ')">AMU</xsl:when>
-             <xsl:when test="starts-with ($signatur,'Vs A ')">2OGWSMSLS</xsl:when>
-             <xsl:when test="starts-with ($signatur,'Vs ')">1OGW</xsl:when>
              <!-- VIII -->
              <xsl:when test="starts-with ($signatur,'VIII A ')">2OGWSMSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'VIII B ')">1OGW</xsl:when>
@@ -637,10 +636,10 @@
              <xsl:when test="starts-with ($signatur,'XIXe A ')">2OGWSMSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'XIXe ')">1OGW</xsl:when>
              <!-- XV -->
-             <xsl:when test="starts-with ($signatur,'xv A ')">2OGWSMSLS</xsl:when>
-             <xsl:when test="starts-with ($signatur,'xv B ')">1OGW</xsl:when>
-             <xsl:when test="starts-with ($signatur,'xv C ')">1OGW</xsl:when>
-             <xsl:when test="starts-with ($signatur,'xv ')">AMU</xsl:when>
+             <xsl:when test="starts-with ($signatur,'XV A ')">2OGWSMSLS</xsl:when>
+             <xsl:when test="starts-with ($signatur,'XV B ')">1OGW</xsl:when>
+             <xsl:when test="starts-with ($signatur,'XV C ')">1OGW</xsl:when>
+             <xsl:when test="starts-with ($signatur,'XV ')">AMU</xsl:when>
              <!-- XVI -->
              <xsl:when test="starts-with ($signatur,'XVI A ')">2OGWSMSLS</xsl:when>
              <xsl:when test="starts-with ($signatur,'XVI aA ')">2OGWSMSLS</xsl:when>
@@ -830,7 +829,7 @@
          <xsl:when test="$abt='888'">
            <xsl:choose>
             <xsl:when test="starts-with ($standort,'Handapparat ')">HANDAPP</xsl:when>
-             <xsl:otherwise>MAG</xsl:otherwise>
+             <xsl:otherwise>1OGW</xsl:otherwise>
            </xsl:choose>
          </xsl:when>
          <xsl:when test="$abt='433'">BK</xsl:when>
